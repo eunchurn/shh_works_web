@@ -7,7 +7,8 @@
     "start": "cross-env NODE_ENV=development parcel watch public/index.html",
     "dev": "cross-env NODE_ENV=developement parcel public/index.html -p 8020 --log-level 1",
     "build": "cross-env NODE_ENV=production parcel build public/index.html --log-level 1",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "Eunchurn Park <eunchurn.park@gmail.com> (https://github.com/eunchurn)",
@@ -41,6 +42,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-tsc": "^2.0.0",
+    "gh-pages": "^3.1.0",
     "parcel-bundler": "^1.12.4",
     "postcss-modules": "^3.2.2",
     "prettier": "^2.1.2",
