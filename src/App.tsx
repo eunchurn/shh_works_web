@@ -1,10 +1,17 @@
 import React from "react";
 import { useTransition, config, animated } from "react-spring";
+import styled from "styled-components";
 import { createUseStyles } from "react-jss";
 import "./App.css";
 import "./TT.css";
 import Hmm from "./views/Hmm";
 import Home from "./views/Home";
+
+const BlackBox = styled.div`
+  width: 100%;
+  height: 100vh;
+  background-color: "#000000";
+`;
 
 const useStyles = createUseStyles({
   root: {
@@ -52,7 +59,11 @@ const useStyles = createUseStyles({
 
 const intro = [
   { id: 1, component: <Hmm /> },
-  { id: 2, component: <Home /> },
+  // { id: 2, component: <BlackBox /> },
+  {
+    id: 2,
+    component: <Home />,
+  },
 ];
 
 export default function () {
@@ -65,33 +76,23 @@ export default function () {
     config: config.molasses,
   });
   React.useEffect(() => {
-    setTimeout(() => set(1), 6000);
+    setTimeout(() => {
+      set(1);
+      // setTimeout(() => {
+      //   set(2);
+      // }, 500);
+    }, 6000);
   }, []);
-  // const transitionSpring = useSpring({
-  //   from: { height: "0%" },
-  //   to: { height: "100%" },
-  //   config: { duration: 2000 },
-  // });
-  // <Hmm />
-  //   <animated.div className={classes.transitionBox} style={transitionSpring}>
-  //     <Home />
-  //   </animated.div>
-  return (
-    <div className={classes.root}>
-      {transitions.map(({ item, props, key }) => (
-        <animated.div
-          key={key}
-          style={{
-            ...props,
-          }}
-        >
-          {item.component}
-        </animated.div>
-      ))}
-      {/* <Hmm />
-      <animated.div className={classes.transitionBox} style={transitionSpring}>
-        <Home />
-      </animated.div> */}
-    </div>
-  );
+
+  return transitions.map(({ item, props, key }) => (
+    <animated.div
+      key={key}
+      className={classes.root}
+      style={{
+        ...props,
+      }}
+    >
+      {item.component}
+    </animated.div>
+  ));
 }
