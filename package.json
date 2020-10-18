@@ -7,7 +7,7 @@
     "start": "cross-env NODE_ENV=development parcel watch public/index.html",
     "dev": "cross-env NODE_ENV=developement parcel public/index.html -p 8020 --log-level 1",
     "prebuild": "yarn clean",
-    "build": "cross-env NODE_ENV=production parcel build public/index.html --log-level 1",
+    "build": "cross-env NODE_ENV=production parcel build public/index.html --public-url /shh_works_web --log-level 1",
     "typecheck": "tsc --noEmit",
     "clean": "rimraf dist .cache",
     "predeploy": "yarn build",
