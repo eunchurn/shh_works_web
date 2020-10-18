@@ -6,13 +6,17 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development parcel watch public/index.html",
     "dev": "cross-env NODE_ENV=developement parcel public/index.html -p 8020 --log-level 1",
+    "prebuild": "yarn clean",
     "build": "cross-env NODE_ENV=production parcel build public/index.html --log-level 1",
     "typecheck": "tsc --noEmit",
+    "clean": "rimraf dist .cache",
+    "predeploy": "yarn build",
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "Eunchurn Park <eunchurn.park@gmail.com> (https://github.com/eunchurn)",
   "license": "MIT",
+  "homepage": "https://eunchurn.github.io/shh_works_web",
   "dependencies": {
     "components": "^0.1.0",
     "drei": "^1.5.7",
@@ -46,6 +50,7 @@
     "parcel-bundler": "^1.12.4",
     "postcss-modules": "^3.2.2",
     "prettier": "^2.1.2",
+    "rimraf": "^3.0.2",
     "sass": "^1.27.0",
     "typescript": "^4.0.3"
   },
