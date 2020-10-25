@@ -1053,6 +1053,31 @@
     "@react-spring/core" "9.0.0-rc.3"
     "@react-spring/shared" "9.0.0-rc.3"
 
+"@react-three/drei@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@react-three/drei/-/drei-2.2.0.tgz#0575f0e97cfdeb63043d30c9203a1aa1c8a8ea53"
+  integrity sha512-nza+4h9VNoY5J6TqdJ53V9MnmmHsMx6niGU7Xom3IltVsZfpixPpEO3jbcQPGaHlz5fibgp4NSDCFzpa8SASRQ==
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    "@react-spring/web" "^9.0.0-rc.3"
+    detect-gpu "^1.5.1"
+    glsl-noise "^0.0.0"
+    lodash.omit "^4.5.0"
+    lodash.pick "^4.4.0"
+    react-merge-refs "^1.0.0"
+    stats.js "^0.17.0"
+    troika-three-text "^0.34.0"
+    utility-types "^3.10.0"
+    zustand "^3.0.3"
+
+"@react-three/postprocessing@^1.4.1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@react-three/postprocessing/-/postprocessing-1.4.1.tgz#bc55edac6dfb6b268b4de2fcc8fd179b582479e8"
+  integrity sha512-i7jM9GFP6wGlPg3iKueDU+HrnRkSf+zhJMHc5E9Ku5+nZjGdeM4Dk1aUkb+AhnloGkcpiB5LBmqPpdvVWRgSCQ==
+  dependencies:
+    postprocessing "^6.17.1"
+    react-merge-refs "^1.1.0"
+
 "@types/hoist-non-react-statics@*":
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz#1124aafe5118cb591977aeb1ceaaed1070eb039f"
@@ -2454,7 +2479,7 @@ destroy@~1.0.4:
   resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.0.4.tgz#978857442c44749e4206613e37946205826abd80"
   integrity sha1-l4hXRCxEdJ5CBmE+N5RiBYJqvYA=
 
-detect-gpu@^1.3.0:
+detect-gpu@^1.3.0, detect-gpu@^1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/detect-gpu/-/detect-gpu-1.5.1.tgz#487c734334a0d41f64302cf77c7986b62aee19bc"
   integrity sha512-Ws//qvt0Kv9uXli1xJbC4jvrJdm+KonOMBjkTkICy4Ko+6qIggOXaF567o4kpapsX+pqW9FXmxh4IIAmqB+q7Q==
@@ -5480,6 +5505,11 @@ posthtml@^0.13.4:
     posthtml-parser "^0.5.0"
     posthtml-render "^1.2.3"
 
+postprocessing@^6.17.1, postprocessing@^6.17.4:
+  version "6.17.4"
+  resolved "https://registry.yarnpkg.com/postprocessing/-/postprocessing-6.17.4.tgz#015c1e8c8d04243875b0da4b52e9f3a407e2d3ec"
+  integrity sha512-rW22ucag46rPfOMKfHjEsUszVYrdvUd3q64muEq8cEqFgQRivmGS43Eijsho16CBigIF7CTb6yxHj5YtC+XCAQ==
+
 prelude-ls@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
@@ -5643,7 +5673,7 @@ react-display-name@^0.2.4:
   resolved "https://registry.yarnpkg.com/react-display-name/-/react-display-name-0.2.5.tgz#304c7cbfb59ee40389d436e1a822c17fe27936c6"
   integrity sha512-I+vcaK9t4+kypiSgaiVWAipqHRXYmZIuAiS8vzFvXHHXVigg/sMKwlRgLy6LH2i3rmP+0Vzfl5lFsFRwF1r3pg==
 
-react-dom@^16.14.0:
+react-dom@>=16.13:
   version "16.14.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.14.0.tgz#7ad838ec29a777fb3c75c3a190f661cf92ab8b89"
   integrity sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw==
@@ -5685,6 +5715,14 @@ react-merge-refs@^1.0.0, react-merge-refs@^1.1.0:
   resolved "https://registry.yarnpkg.com/react-merge-refs/-/react-merge-refs-1.1.0.tgz#73d88b892c6c68cbb7a66e0800faa374f4c38b06"
   integrity sha512-alTKsjEL0dKH/ru1Iyn7vliS2QRcBp9zZPGoWxUOvRGWPUYgjo+V01is7p04It6KhgrzhJGnIj9GgX8W4bZoCQ==
 
+react-postprocessing@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/react-postprocessing/-/react-postprocessing-1.4.0.tgz#caba52f4f6efc839bfbdeed5414f4dd288db0fa4"
+  integrity sha512-IcUfFSGigmZ9E8u07A6WgB9uVYpwiFL8Tvycadcbu0vzI0bbqthikoNKD5zDWv0h5mnUu/y95kIDR5AViup0Fw==
+  dependencies:
+    postprocessing "^6.17.1"
+    react-merge-refs "^1.1.0"
+
 react-reconciler@0.25.1:
   version "0.25.1"
   resolved "https://registry.yarnpkg.com/react-reconciler/-/react-reconciler-0.25.1.tgz#f9814d59d115e1210762287ce987801529363aaa"
@@ -5703,7 +5741,7 @@ react-spring@^8.0.27:
     "@babel/runtime" "^7.3.1"
     prop-types "^15.5.8"
 
-react-three-fiber@^5.0.6:
+react-three-fiber@>=5.0:
   version "5.0.6"
   resolved "https://registry.yarnpkg.com/react-three-fiber/-/react-three-fiber-5.0.6.tgz#b02074fae1c9418dd78b45c3745dc4c4ed219fb2"
   integrity sha512-QFmibD/XfWxqH9gZI6j/LDwFVBzXKDaNmcOELjtF3qyl0SENmg8r0bfaI86u5G7EbUY+cRNLSrjPpwKyMyscSA==
@@ -5726,7 +5764,7 @@ react-use-measure@^2.0.1:
   dependencies:
     debounce "^1.2.0"
 
-react@^16.14.0:
+react@>=16.13:
   version "16.14.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.14.0.tgz#94d776ddd0aaa37da3eda8fc5b6b18a4c9a3114d"
   integrity sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==
@@ -6757,15 +6795,33 @@ troika-three-text@^0.31.0:
     troika-three-utils "^0.31.0"
     troika-worker-utils "^0.31.0"
 
+troika-three-text@^0.34.0:
+  version "0.34.0"
+  resolved "https://registry.yarnpkg.com/troika-three-text/-/troika-three-text-0.34.0.tgz#016190e58482fbf7abdab41e329804dc84cee81a"
+  integrity sha512-7lcJAqDZXCwJ8p+nnMgd26eH3g90NlM5L381q0En08zrZXhuQSxp/hmjv1CPIzR7U9+Mhfe+KZ2jGYSuK3zfbw==
+  dependencies:
+    troika-three-utils "^0.34.0"
+    troika-worker-utils "^0.34.0"
+
 troika-three-utils@^0.31.0:
   version "0.31.0"
   resolved "https://registry.yarnpkg.com/troika-three-utils/-/troika-three-utils-0.31.0.tgz#825d79313d04112fdfc63389ff5531ab8d7ba1a7"
   integrity sha512-IUy61i+Kv0EjievWhOmIkqjDa1acIO2J98oO2tZ+PpEfA+Q0syRknH4SN+iiYpa/MNJH1gQz0WfZF4Vk1/pumQ==
 
+troika-three-utils@^0.34.0:
+  version "0.34.0"
+  resolved "https://registry.yarnpkg.com/troika-three-utils/-/troika-three-utils-0.34.0.tgz#9c34b31e8f6fd978af4be21382b7a21108ffd3e6"
+  integrity sha512-6Dm6FzGFpuiehjKkm3wAV3e+SPnHQ+GxwXnHFToKLcQ1/gVDOIL69BWCosrlEUb0SUOQjQv6sd5QpNT6IIewpQ==
+
 troika-worker-utils@^0.31.0:
   version "0.31.0"
   resolved "https://registry.yarnpkg.com/troika-worker-utils/-/troika-worker-utils-0.31.0.tgz#3d6783265f74cda1860e9d8369de433d29c70b92"
   integrity sha512-WxHhfFmy6dWBMACUnzInBlqlR601Dy3c9hiRp4aAN+ACzSldwsv1SHOqix4X2+6HTz/pBtHtfJVDbwJiO+lbCw==
+
+troika-worker-utils@^0.34.0:
+  version "0.34.0"
+  resolved "https://registry.yarnpkg.com/troika-worker-utils/-/troika-worker-utils-0.34.0.tgz#48e05d9cf6ca2bf42a5c96a0f81138369f2ea0a2"
+  integrity sha512-kB42kXw+b+Q1omvv/p1R6sZ7mO03lihAoySGjjjhNfLlJ1A7lsJW8vPi1WiSqVqGrI0BdDTPiyTU2AlYgSjZUg==
 
 tsconfig-paths@^3.9.0:
   version "3.9.0"

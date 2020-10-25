@@ -4,10 +4,6 @@ import { useSpring, animated } from "react-spring";
 import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
-  "@keyframes slide": {
-    from: { width: "0px" },
-    to: { width: "359.95px" },
-  },
   container: {
     display: "flex",
     justifyContent: "center",
@@ -32,7 +28,6 @@ const useStyles = createUseStyles({
     paddingRight: 10,
   },
   transitionBox: {
-    animation: "$slide 2s cubic-bezier(0.755, 0.05, 0.855, 0.06) forwards",
     position: "absolute",
     backgroundColor: "#ffffff",
     width: "100%",
@@ -49,11 +44,11 @@ export default function () {
   });
 
   return (
-    <div className={classes.container}>
+    <animated.div className={classes.container}>
       <p className={classes.text}>음</p>
-      <div className={classes.bar} style={barSpring}>
+      <animated.div className={classes.bar} style={barSpring}>
         <Bar height="3px" />
-      </div>
-    </div>
+      </animated.div>
+    </animated.div>
   );
 }

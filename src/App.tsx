@@ -6,6 +6,7 @@ import "./App.css";
 import "./TT.css";
 import Hmm from "./views/Hmm";
 import Home from "./views/Home";
+import Effect from "./views/Effect";
 
 const BlackBox = styled.div`
   width: 100%;
@@ -70,10 +71,11 @@ export default function () {
   const classes = useStyles();
   const [index, set] = React.useState(0);
   const transitions = useTransition(intro[index], (item) => item.id, {
-    from: { opacity: 0 },
+    from: { opacity: 1 },
     enter: { opacity: 1 },
-    leave: { opacity: 0 },
+    leave: { opacity: 1 },
     config: config.molasses,
+    // reset: true,
   });
   React.useEffect(() => {
     setTimeout(() => {
@@ -81,7 +83,7 @@ export default function () {
       // setTimeout(() => {
       //   set(2);
       // }, 500);
-    }, 6000);
+    }, 5000);
   }, []);
 
   return transitions.map(({ item, props, key }) => (
@@ -95,4 +97,10 @@ export default function () {
       {item.component}
     </animated.div>
   ));
+  // return <Home />;
+  // return (
+  //   <div className={classes.root}>
+  //     <Effect />
+  //   </div>
+  // );
 }
